@@ -1,0 +1,84 @@
+body{
+    justify-content: center;
+    align-items: center;
+    background-image: url('tło.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    width:460px;
+    height: 500px;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translate(100%,10%);
+    background-color: gray;
+    border-radius: 10px;
+}
+.button{
+    font-size: 50px;
+    padding: 40px;
+    border: 1px solid black;
+    border-radius: 10%;
+    margin: 10px;
+    background-color:lightgray;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-content: center;
+    
+}
+.button:hover{
+    border: 1px dotted orange;
+}
+#result{
+    background-color: lightgray;
+    width: 400px;
+    height: 40px;
+    margin-left: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 30px;
+    padding-top: 3px;
+    position: relative;
+    font-family:"Montserrat" ;
+}
+#buttons{
+    display: flex;
+    flex-wrap: wrap;
+    width:400px;
+    height: 400px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: gray;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.buttonSmall{
+    width: 40px;
+    height: 40px;
+    background-color: lightgray;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+#SmallButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+}
+.buttonSmall:hover{
+    border: orange 1px dotted;
+}

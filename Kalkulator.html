@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="icon" href="kalkulator-ikonka.png">
+    <link rel="stylesheet" href="styl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
+</head>
+<body>
+    <div id="container">
+        <input type="text" id="result" placeholder="Tutaj wynik"></input>
+        <br>
+        <div id="buttons">
+            <div class="button" onclick="addToResult('1')">1</div>
+            <div class="button" onclick="addToResult('2')">2</div>
+            <div class="button" onclick="addToResult('3')">3</div>
+            <div class="button" onclick="addToResult('4')">4</div>
+            <div class="button" onclick="addToResult('5')">5</div>
+            <div class="button" onclick="addToResult('6')">6</div>
+            <div class="button" onclick="addToResult('7')">7</div>
+            <div class="button" onclick="addToResult('8')">8</div>
+            <div class="button" onclick="addToResult('9')">9</div>
+        </div>
+        <div id="SmallButtons">
+            <div class="buttonSmall" onclick="Erase()">C</div>
+            <div class="buttonSmall" onclick="addToResult('+')">+</div>
+            <div class="buttonSmall" onclick="addToResult('-')">-</div>
+            <div class="buttonSmall" onclick="addToResult('/')">/</div>
+            <div class="buttonSmall" onclick="addToResult('*')">*</div>
+            <div class="buttonSmall" onclick="calculateResult()">=</div>
+
+        </div>
+    </div>
+    <script>
+        var wynik = document.getElementById('result');
+        
+        function addToResult(value) {
+            wynik.value += value;
+        }
+        
+        function calculateResult() {
+            wynik.value = math.evaluate(wynik.value);
+        }
+        function Erase(){
+            wynik.value = "";
+        }
+    </script>
+</body>
+</html>
